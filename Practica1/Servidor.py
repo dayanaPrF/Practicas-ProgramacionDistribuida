@@ -30,48 +30,60 @@ class Servidor:
             print(f"Error al cargar la configuración: {e}")
             return None
     
+    def solicitarConfiguracionArchivos(self, archivo_carpeta):
+        resp = input(f"¿Desea publicar el archivo {archivo_carpeta}? (y/n) ")
+        if resp.lower() == "y":
+            #Hacemos una funcion para cargar a JSON con publico True
+            public = True
+        elif resp.lower() == "n":
+            #Hacemos una funcion para cargar a JSON con publico False
+            public = False
+        else:
+            print("Opcion no disponible")
+        ttl = input(f"Ingrese el TTL para {archivo_carpeta}: ")
+        return public, ttl
+
     #Compara las listas de archivos del json y de la obtenida actual
     def estadoActualArchivos(self):
+        self.cargarJsonAListaArchivos()
         #Para implementar este metodo ya deben estar cargados los archivos del JSON a la lista de archivos
         if not self.lista_archivos:
+            #Si la lista de archivos esta vacia entonces le cargamos la lista de nombres y le añadimos 
+            # su configuracion
+            for archivo_carpeta in self.lista_nombres:
+                #agregamos todos los archivos de la lista de nombres a la lista de archivos
+                nombre, extension = os.path.splitext(archivo_carpeta)
+                public, ttl = self.solicitarConfiguracionArchivos(archivo_carpeta)
+                self.agregarArchivoAlJson(nombre, extension, public, ttl)
             print("Configuracion vacia. Aun no hay archivos")
             return
         #Recorre cada archivo en la lista de la carpeta
         for archivo_carpeta in self.lista_nombres:
-            if archivo_carpeta not in self.lista_archivos: 
+            if archivo_carpeta in self.lista_archivos: 
                 #Si el archivo de la carpeta NO esta en la lista del JSON
                 #preguntamos al usuario si se podrá publicar, para ello, si el usuario contesta se asigna ese 
                 # valor, si no, después de un tiempo establecido, se le asignará un valor predeterminado a 
                 # cada archivo.
                 nombre, extension = os.path.splitext(archivo_carpeta)
-                resp = input(f"¿Desea publicar el archivo {archivo_carpeta}? (y/n)")
-                if resp == "y" or resp == "Y":
-                    #Hacemos una funcion para cargar a JSON con publico True
-                    public = True
-                elif resp == "n" or resp == "N":
-                    #Hacemos una funcion para cargar a JSON con publico False
-                    public = False
-                else:
-                    print("Opcion no disponible")
-                ttl = input(f"Ingrese el TTL para {archivo_carpeta}")
+                public, ttl = self.solicitarConfiguracionArchivos(archivo_carpeta)
                 self.agregarArchivoAlJson(nombre, extension, public, ttl)
-                break
         #Recorre cada archivo en la lista del JSON
         for archivo_json in self.lista_archivos:
-            nombre_completo = archivo_json.nombre+"."+archivo_json.extension
+            nombre_completo = archivo_json.nombre+archivo_json.extension
             if nombre_completo not in self.lista_nombres:
                 #Si el archivo del JSON ya no esta en la carpeta
                 #Borramos el arch_Json del JSON
                 self.eliminarArchivoDelJson(nombre_completo)
-                break
 
     #Se carga el Json a la lista de archivos
     def cargarJsonAListaArchivos(self):
         config = self.cargarConfiguracionJSON()
-        if config is None:
+        if config is None or not config:
             print("Aun no hay archivos cargados")
             return
         for arch_Json in config["archivos"]:
+            if arch_Json is None:
+                break
             nombre, extension = os.path.splitext(arch_Json["nombre"])
             self.lista_archivos.append(Archivo(nombre, extension, arch_Json["publicar"], arch_Json["ttl"]))
 
@@ -97,7 +109,7 @@ class Servidor:
 
     #Eliminar 1 solo archivo del json
     def eliminarArchivoDelJson(self, nombre_archivo):
-        config = self.cargarConfiguracion() 
+        config = self.cargarConfiguracionJSON() 
         if config is None:
             return
         #Filtrar la lista de archivos eliminando el archivo que coincide con el nombre
@@ -123,11 +135,12 @@ class Servidor:
 
 def main():
     path = r"C:\Users\dayan\OneDrive\Documentos\Practica1"
+    #path = r"c:\Users\dayan\OneDrive\Documentos\Practicas-ProgramacionDistribuida\Practica1"
     #print(f"Contenido del directorio {path}:")
     #print(os.listdir(path))
     s = Servidor(path)
     s.obtenerNombresArchivos()
-    #s.subirConfiguracionJson()
+    s.estadoActualArchivos()
     s.imprimirLista(s.lista_nombres)
 
 if __name__ == "__main__":

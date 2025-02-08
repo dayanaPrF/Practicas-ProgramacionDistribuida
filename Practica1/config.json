@@ -1,0 +1,64 @@
+{
+    "archivos": [
+        {
+            "nombre": "Archivo1.txt",
+            "publicar": true,
+            "ttl": "400"
+        },
+        {
+            "nombre": "Caballo.jpg",
+            "publicar": false,
+            "ttl": "200"
+        },
+        {
+            "nombre": "Diapositivas.pptx",
+            "publicar": true,
+            "ttl": "500"
+        },
+        {
+            "nombre": "HojaCalculo.xlsx",
+            "publicar": false,
+            "ttl": "200"
+        },
+        {
+            "nombre": "Archivo1.txt",
+            "publicar": false,
+            "ttl": "300"
+        },
+        {
+            "nombre": "Caballo.jpg",
+            "publicar": false,
+            "ttl": "400"
+        },
+        {
+            "nombre": "Archivo1.txt",
+            "publicar": true,
+            "ttl": "300"
+        },
+        {
+            "nombre": "Caballo.jpg",
+            "publicar": false,
+            "ttl": "300"
+        },
+        {
+            "nombre": "Diapositivas.pptx",
+            "publicar": false,
+            "ttl": "300"
+        },
+        {
+            "nombre": "HojaCalculo.xlsx",
+            "publicar": true,
+            "ttl": "200"
+        },
+        {
+            "nombre": "Archivo1.txt",
+            "publicar": true,
+            "ttl": "200"
+        },
+        {
+            "nombre": "Archivo1.txt",
+            "publicar": true,
+            "ttl": "200"
+        }
+    ]
+}

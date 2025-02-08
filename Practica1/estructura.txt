@@ -1,0 +1,162 @@
+[
+    {
+        "ip": "192.168.56.1",
+        "data": [
+            {
+                "path": "C:\\Users\\Bobe\\Documents\\CodigosR",
+                "files": [
+                    {
+                        "name": "Estructura_iterativa",
+                        "extension": ".R",
+                        "creationDate": "2025/01/02 23:30:16",
+                        "modificationDate": "2025/01/02 23:33:53",
+                        "size": "107.00 B",
+                        "ttl": 2432,
+                        "publish": true
+                    },
+                    {
+                        "name": "operaciones_con_matrices",
+                        "extension": ".R",
+                        "creationDate": "2025/01/02 23:50:04",
+                        "modificationDate": "2025/01/03 00:00:43",
+                        "size": "445.00 B",
+                        "ttl": 2332,
+                        "publish": false
+                    },
+                    {
+                        "name": "primerArch",
+                        "extension": ".R",
+                        "creationDate": "2025/01/02 23:19:46",
+                        "modificationDate": "2025/02/06 10:55:13",
+                        "size": "46.00 B",
+                        "ttl": 3242,
+                        "publish": true
+                    },
+                    {
+                        "name": "vectores",
+                        "extension": ".R",
+                        "creationDate": "2025/01/02 23:35:44",
+                        "modificationDate": "2025/01/02 23:49:16",
+                        "size": "646.00 B",
+                        "ttl": 3443,
+                        "publish": false
+                    },
+                    {
+                        "name": "Nuevo Documento de texto",
+                        "extension": ".txt",
+                        "creationDate": "2025/02/06 22:43:12",
+                        "modificationDate": "2025/02/06 22:43:12",
+                        "size": "0.00 B",
+                        "ttl": 234,
+                        "publish": true
+                    },
+                    {
+                        "name": "Nuevo Documento de texto (2)",
+                        "extension": ".txt",
+                        "creationDate": "2025/02/06 23:27:59",
+                        "modificationDate": "2025/02/06 23:27:59",
+                        "size": "0.00 B",
+                        "ttl": 345,
+                        "publish": true
+                    }
+                ]
+            },
+            {
+                "path": "C:\\Users\\Bobe\\Documents\\pvz",
+                "files": [
+                    {
+                        "name": "Instrucciones",
+                        "extension": ".txt",
+                        "creationDate": "2024/08/24 22:50:54",
+                        "modificationDate": "2021/05/23 16:23:10",
+                        "size": "369.00 B",
+                        "ttl": 432,
+                        "publish": true
+                    },
+                    {
+                        "name": "PVZMB by blizzBoyGames",
+                        "extension": ".rar",
+                        "creationDate": "2024/08/24 22:50:01",
+                        "modificationDate": "2024/08/24 22:50:08",
+                        "size": "59.97 MB",
+                        "ttl": 3454,
+                        "publish": false
+                    },
+                    {
+                        "name": "PVZMB Setup",
+                        "extension": ".exe",
+                        "creationDate": "2024/08/24 22:50:54",
+                        "modificationDate": "2021/05/23 16:04:33",
+                        "size": "59.98 MB",
+                        "ttl": 3600,
+                        "publish": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ip": "192.168.0.4",
+        "data": [
+            {
+                "path": "C:\\Users\\Bobe\\Documents\\CodigosR",
+                "files": [
+                    {
+                        "name": "Estructura_iterativa",
+                        "extension": ".R",
+                        "creationDate": "2025/01/02 23:30:16",
+                        "modificationDate": "2025/01/02 23:33:53",
+                        "size": "107.00 B",
+                        "ttl": 3542,
+                        "publish": true
+                    },
+                    {
+                        "name": "Nuevo Documento de texto (2)",
+                        "extension": ".txt",
+                        "creationDate": "2025/02/06 23:27:59",
+                        "modificationDate": "2025/02/06 23:27:59",
+                        "size": "0.00 B",
+                        "ttl": 3254,
+                        "publish": true
+                    },
+                    {
+                        "name": "Nuevo Documento de texto",
+                        "extension": ".txt",
+                        "creationDate": "2025/02/06 22:43:12",
+                        "modificationDate": "2025/02/06 22:43:12",
+                        "size": "0.00 B",
+                        "ttl": 6564,
+                        "publish": false
+                    },
+                    {
+                        "name": "operaciones_con_matrices",
+                        "extension": ".R",
+                        "creationDate": "2025/01/02 23:50:04",
+                        "modificationDate": "2025/01/03 00:00:43",
+                        "size": "445.00 B",
+                        "ttl": 4634,
+                        "publish": false
+                    },
+                    {
+                        "name": "primerArch",
+                        "extension": ".R",
+                        "creationDate": "2025/01/02 23:19:46",
+                        "modificationDate": "2025/02/06 10:55:13",
+                        "size": "46.00 B",
+                        "ttl": 56433,
+                        "publish": true
+                    },
+                    {
+                        "name": "vectores",
+                        "extension": ".R",
+                        "creationDate": "2025/01/02 23:35:44",
+                        "modificationDate": "2025/01/02 23:49:16",
+                        "size": "646.00 B",
+                        "ttl": 543,
+                        "publish": false
+                    }
+                ]
+            }
+        ]
+    }
+]
